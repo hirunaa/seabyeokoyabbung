@@ -1,0 +1,105 @@
+/* ===== 공통 리셋 & 기본 ===== */
+* { box-sizing: border-box; }
+html, body { width: 100%; height: 100%; margin: 0; padding: 0; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* 페이지 루트 */
+.MainPage {
+  min-height: 100vh;
+  width: 100%;
+  /* 아주 넓은 화면에서 너무 퍼지지 않게 하고 싶으면 아래 2줄 주석 해제
+  max-width: 1200px;
+  margin: 0 auto;
+  */
+}
+
+/* 제목: 화면 크기에 맞춰 유연하게 */
+#MainTitle {
+  text-align: center;
+  margin: 16px 0;
+  font-size: clamp(24px, 6vw, 56px); /* 기존 470% 대신 반응형 글자 크기 */
+  line-height: 1.2;
+}
+
+/* ===== Nav 영역 ===== */
+.NavBar {
+  width: 100%;
+  padding: 10px 12px;        /* height:% 대신 패딩으로 높이 확보 */
+  border: 1px solid #000;    /* 기존 테두리 유지 */
+  border-radius: 6px;
+  background: #000000;
+  color: #ffffff;
+  overflow-x: hidden;        /* 기본은 숨김, 작은 화면에서만 스크롤 허용 */
+}
+
+/* 메뉴 컨테이너 */
+.NavBox {
+  display: flex;
+  justify-content: center;   /* 가로 가운데 */
+  align-items: center;       /* 세로 가운데 */
+  gap: 24px;                 /* 항목 간격 */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;       /* 가능한 한 줄 유지 */
+  float: none !important;    /* 이전 float 영향 제거 */
+}
+
+/* 개별 항목 */
+.NavBox li,
+.NavManu {                    /* 기존 클래스명도 함께 대응 */
+  display: inline-flex;
+  align-items: center;        /* 텍스트 수직 가운데 */
+  padding: 6px 4px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* 항목 사이 구분자 |  (마지막 항목은 제외) */
+.NavBox li:not(:last-child)::after,
+.NavManu:not(:last-child)::after {
+  content: "|";
+  margin-left: 31px;          /* 글자와 | 사이 간격 일정하게 */
+  color: #666;
+}
+
+/* ===== 메인 이미지 ===== */
+#MainPageImage {
+  max-width: 100%;
+  margin: 12px auto 0;
+}
+
+#MainPageImage img {
+  width: 100%;
+  height: auto;               /* 비율 유지 (기존 height:100% 제거) */
+  opacity: 0.64;              /* 64% → 0.64 로 정확히 */
+  border-radius: 4px;
+}
+
+/*====================================================section 관련 css===================================================*/
+.pages {
+  display: block;
+}
+/* ===== 반응형 보완 ===== */
+/* 작은 화면에서는 메뉴가 넘치면 가로 스크롤 허용 (한 줄 유지) */
+@media (max-width: 560px) {
+  .NavBar { overflow-x: auto; }
+  .NavBox { gap: 16px; }
+  #MainTitle { font-size: clamp(22px, 7vw, 40px); }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav li {
+    margin: 5px 0;
+  }
+
+}
+
+
+/* 더 작은 화면에서는 간격과 글자 크기 추가 축소 */
+@media (max-width: 360px) {
+  .NavBox { gap: 12px; }
+  .NavBox li { padding: 6px 2px; }
+}
