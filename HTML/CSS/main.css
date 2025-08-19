@@ -76,7 +76,7 @@ img { max-width: 100%; height: auto; display: block; }
   border-radius: 4px;
 }
 
-/*==================section 관련 css========================*/
+/*==================section css========================*/
 .pages {
   display: block;
 }
@@ -100,9 +100,10 @@ img { max-width: 100%; height: auto; display: block; }
 .bottom {
   display: block;
   background-color: #81a2df;
-  height: 130px;
+  min-height: auto;
   margin: 0 0 0 0;
   align-content: center;
+  justify-content: flex-end;
 }
 .bottom a:not(:last-child){
   margin-bottom: 7px;
@@ -118,6 +119,35 @@ img { max-width: 100%; height: auto; display: block; }
   width: 20px;
   height: 20px;
   margin-right: 5px;
+}
+
+#BackgroundMusic {
+  display: block;       
+  width: 300px; 
+  margin-left: auto;
+}
+
+.sns-and-audio {
+
+  padding: 12px 12px 16px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 13px;
+}
+
+.audio-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.audio-wrap p {
+  font-size: 12px;
+  color: #ffffff;
+  margin-left: 12px;
+}
+.audio-wrap p a {
+  text-decoration-line: none;
+  color: #ffffff;
 }
 
 
