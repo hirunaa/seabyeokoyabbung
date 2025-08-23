@@ -20,8 +20,7 @@ $(document).ready(function(){
         $content.hide().empty();
         $mainImg.show();
         $nav.find("li").removeClass("active");
-        // (선택) 주소의 해시 지우기
-        // history.pushState({}, "", location.pathname);
+        
         window.scrollTo(0, 0);
     }
 
