@@ -1,0 +1,31 @@
+/* 왼쪽(200px) + 오른쪽(가변) 2열 레이아웃 */
+.IndexLayout{
+  display: grid;
+  grid-template-columns: 200px 1fr;  /* 네비 폭 200px, 오른쪽은 자동 확장 */
+  gap: 16px;                         /* 사이 간격 */
+}
+
+/* 네비바는 더 이상 absolute/fixed 쓰지 않기 */
+.IndexNavBar{
+  position: static;        /* absolute/fixed 있으면 제거 */
+  background: #e5d1a3;     /* 양피지 텍스처 배경 등 */
+  border-radius: none;
+  padding: 10px;
+  background-image: url("../IMAGE/IndexPage/IndexPageNav.png");
+}
+
+.IndexLi {
+    cursor: pointer;
+    margin-bottom: 20px;
+    list-style: none;
+
+}
+/* 오른쪽 콘텐츠 박스 */
+#IndexContainer{
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 6px;
+  min-height: 420px;
+  padding: 16px;
+  overflow: auto;          /* 내용 넘칠 때 스크롤 */
+}
