@@ -15,6 +15,12 @@ $(document).ready(function(){
     const $img = $("#IndexPreview");      // <img id="IndexPreview">가 있는 경우
     const $box = $("#IndexContainer");    // 아니면 이 div의 배경으로
 
+    $box.css("position", "relative");
+    $box.find(".loader").remove(); // 중복 방지
+    $box.append(
+      '<div class="loader" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(255,255,255,0.8);padding:6px 12px;border-radius:6px;font-size:14px;color:#333;z-index:10;">로딩중…</div>'
+    );
+
     if ($img.length) {
       // 부드럽게 전환 + 오류 대비
       $img.stop(true, true).fadeTo(120, 0, function () {
@@ -24,7 +30,10 @@ $(document).ready(function(){
           .on("error", function () {
             $(this).attr("src", "./IMAGE/index/placeholder.png");
           })
-          .fadeTo(200, 1);
+          .fadeTo(200, 1, function () {
+            // 🔹 로딩중 제거
+            $box.find(".loader").remove();
+          });
       });
     } else if ($box.length) {
       $box.css({
