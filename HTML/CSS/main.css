@@ -148,7 +148,8 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .audio-wrap p a {
   text-decoration-line: none;
-  color: #ffffff;
+  color: #3556C1;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 

@@ -7,6 +7,7 @@ $(document).ready(function(){
     Illustrate:   "./IMAGE/IndexPage/Illustrate.png",
     Composition:  "./IMAGE/indexPage/Composition.png",
     VideoEditing: "./IMAGE/IndexPage/VideoEditing.png",
+    Recruiting: "./IMAGE/IndexPage/Recruiting.png",
     // 필요한 항목 계속 추가
   };
 
