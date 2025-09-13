@@ -16,7 +16,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* 제목: 화면 크기에 맞춰 유연하게 */
 #MainTitle {
   text-align: center;
-  margin: 16px 0;
+  margin: 7px 0;
   font-size: clamp(24px, 6vw, 56px); /* 기존 470% 대신 반응형 글자 크기 */
   line-height: 1.2;
 }
@@ -25,9 +25,9 @@ img { max-width: 100%; height: auto; display: block; }
 .NavBar {
   width: 100%;
   padding: 10px 12px;        /* height:% 대신 패딩으로 높이 확보 */
-  border: 1px solid #000;    /* 기존 테두리 유지 */
+  border: 1px solid #3556C1;    /* 기존 테두리 유지 */
   border-radius: 6px;
-  background: #000000;
+  background: #3556C1;
   color: #ffffff;
   overflow-x: hidden;        /* 기본은 숨김, 작은 화면에서만 스크롤 허용 */
 }
@@ -60,7 +60,7 @@ img { max-width: 100%; height: auto; display: block; }
 .NavManu:not(:last-child)::after {
   content: "|";
   margin-left: 31px;          /* 글자와 | 사이 간격 일정하게 */
-  color: #666;
+  color: #ffffff;
 }
 
 /* ===== 메인 이미지 ===== */
@@ -99,7 +99,7 @@ img { max-width: 100%; height: auto; display: block; }
 /*=======================bottom css=======================*/
 .bottom {
   display: block;
-  background-color: #81a2df;
+  background-color: #3DD3FF;
   min-height: auto;
   margin: 0 0 0 0;
   align-content: center;
@@ -139,6 +139,7 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-bottom: 7px;
 }
 .audio-wrap p {
   font-size: 12px;
