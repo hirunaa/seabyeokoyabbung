@@ -1,0 +1,17 @@
+.VoiceVideo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 가로 가운데 */
+  align-items: center;     /* 세로 가운데 (필요하면 추가) */
+  width: 100%;
+  height: 800px;
+  margin: 20px 0;          /* 위아래 여백 */
+  background-image: url(../IMAGE/VoicePage/BackgroundImage.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 53%;
+}
+
+.VoiceVideo iframe {
+  max-width: 100%;  /* 반응형 대응 */
+}
