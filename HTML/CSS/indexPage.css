@@ -26,7 +26,7 @@
   border: 1px solid rgba(0,0,0,.08);
   border-radius: 6px;
   min-height: 420px;
-  padding: 16px;
+  padding-left: 170px;
   overflow: auto;          /* 내용 넘칠 때 스크롤 */
 }
 
